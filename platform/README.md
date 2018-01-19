@@ -15,7 +15,7 @@ __IMPORTANT__
 In order to access the platform you need to sign up [here](https://noos.cloud/) and in your profile
 you will find the `user` and the `token` data that you need to connect to the platform.
 
-In other to fill the `platform` object with the data, there are 2 ways:
+In order to fill the `platform` object with the data, there are 2 ways:
 - Initialize directly in the code
 
 ```cpp

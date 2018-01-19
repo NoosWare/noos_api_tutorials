@@ -1,7 +1,8 @@
 # Example
 -----
 
-_Noos API has to be installed_ You can find it [here](https://github.com/ortelio/noos-api-cpp)
+_Noos API has to be installed._ 
+You can find it [here](https://github.com/ortelio/noos-api-cpp)
 
 Now we have all the pieces together, you can run your first example:
 

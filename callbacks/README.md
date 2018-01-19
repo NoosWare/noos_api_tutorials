@@ -3,9 +3,9 @@
 
 ## Content
 - [Introduction](#introduction)
-- [std::function](#std::function)
-- [std::bind](#std::bind)
-- [Lamba functions](#lambda functions)
+- [std::function](#function)
+- [std::bind](#bind)
+- [Lamba functions](#lambda)
 - [Important!](#important)
 
 
@@ -27,7 +27,6 @@ There are different methods to implement the callback:
 
 **For more information about all type of callbacks, see** [here](http://stackoverflow.com/questions/2298242/callback-functions-in-c).
 
-## `std::function` objects
 Class template std::function is a [general-purpose polymorphic function wrapper](http://en.cppreference.com/w/cpp/utility/functional/function).
 
 For example, a definition of a `std::function`:
@@ -39,7 +38,7 @@ std::function<void(int)>
 Where `int` is the input arguments of this function and `void` is the return type.
 There are three ways to use it:
 
-### std::function
+### function
 In this case you only need to have a function and initialize the `std::function` with this function.
 For example:
 
@@ -59,7 +58,7 @@ int main()
 
 __**Take care to use the same arguments and return type**__
 
-### std::bind
+### bind
 The function template bind generates a [forwarding call wrapper for a callable object](http://en.cppreference.com/w/cpp/utility/functional/bind).
 
 For example:
@@ -106,7 +105,7 @@ int main()
 In this case we are associating our `std::function` with class method `Foo::print_add`.
 Example in NOOS API can be found [here](../class_reactor/README.md).
 
-### Lambda functions
+### Lambda
 
 A lambda function is an [anonymous inline function](http://en.cppreference.com/w/cpp/language/lambda).
 Similar to the previous examples:
@@ -141,5 +140,5 @@ The callback will be executed by the API, when a reply is received by the cloud 
 ### Important!
 Depending on the service that it is called, the variables need it are differents.
 To find which type of data you are going to receive, check the [API documentation](https://docs.noos.cloud/)
+
 ![Documentation example](note.png)
-Format: ![Alt Text](url)
