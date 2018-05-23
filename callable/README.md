@@ -34,14 +34,19 @@ For example, to check the services which are availables in the platform, the ser
             std::cout << name << std::endl;
          }
      };
+    // We need to create a platform object with our user and password for using 
+    // the NOOS Cloud 
+    // IMPORTANT: You have to change your user and password. The example doesn't work
+    //
+    platform node = {"demo.noos.cloud", "9001", "your_pass", "your_user"};
 
     /*
      * `callable` object is created specifying the name of the service
      * `available_services`, `keep_alive` is `false` in this case, due to
      * the service is going to be called only once, the callback and the
-     * `platform_data`(explained in `platform` tutorial).
+     * `node`(explained in `platform` tutorial).
      */
-    callable<available_services,false> query(callback, platform_data);
+    callable<available_services,false> query(callback, node);
 
     /*
      * Finally the information is sent to the platform

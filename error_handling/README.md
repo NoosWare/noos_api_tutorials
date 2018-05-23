@@ -53,6 +53,13 @@ int main()
     auto callback = [&](std::vector<noos::object::face> faces) { 
                         std::cout << "faced detected: " << faces.size() << std::endl;
                     };
+
+    // We need to create a platform object with our user and password for using 
+    // the NOOS Cloud 
+    // IMPORTANT: You have to change your user and password. The example doesn't work
+    //
+    platform node = {"demo.noos.cloud", "9001", "your_pass", "your_user"};
+
     //
     // For adding our error handler, we have to specify all the template parameters
     // that callable class needs. For more information @see noos::cloud::callable
@@ -61,7 +68,7 @@ int main()
              false,
              asio_https,
              my_error_handler> query(callback, 
-                                     default_node, 
+                                     node, 
                                      pic);
 
     query.send(2);
